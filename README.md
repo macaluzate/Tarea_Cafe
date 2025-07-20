@@ -7,7 +7,22 @@ Pipeline completo para:
 3. **Entrenar modelos de ML** (Random Forest, Lasso, Ridge) para predecir `PUNTAJE`.
 
 
-## Instalar dependencias:
+## 1. Instalar dependencias:
 pip install -r requirements.txt
+
+## 2. Ejecutar el procesamiento:
+  python scripts/procesar_cafe.py
+
+## 3. Entrenar un Modelo: 
+python scripts/modelado_cafe.py --data data/processed/dataset_final_procesado.csv --modelo rf
+Cambiar --modelo a lasso o ridge según necesidad.
+
+## 4. Comparar Modelos:
+ejecuta los tres:
+python scripts/modelado_cafe.py --data data/processed/dataset_final_procesado.csv --modelo rf
+python scripts/modelado_cafe.py --data data/processed/dataset_final_procesado.csv --modelo lasso
+python scripts/modelado_cafe.py --data data/processed/dataset_final_procesado.csv --modelo ridge
+
+
 
 
