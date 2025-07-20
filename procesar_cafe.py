@@ -4,8 +4,8 @@ from pathlib import Path
 # =========================================================
 # 0. RUTAS DE ARCHIVOS (ADAPTA SI CAMBIAN)
 # =========================================================
-FILE_17 = 'Formato de Control de Calidad Café de Trillado (1).xlsx'
-FILE_18 = 'FT 18  Formato de  Tostión (1).xlsx'
+FILE_17 = '/content/CC FT 17   Formato de Control de Calidad Café de Trillado (1).xlsx'
+FILE_18 = '/content/CC FT 18  Formato de  Tostión (1).xlsx'
 
 # =========================================================
 # 1. UTILIDADES
@@ -66,7 +66,11 @@ if 1 in df17.index and 0 in df17.index:
 # 3. NORMALIZACIÓN DE COLUMNAS CLAVE
 # =========================================================
 # Posibles nombres de la columna de denominación / marca (ajusta si ves otra)
-COL_DENOM = buscar_variantes(df17, ['DENOMINACIÓN/     MARCA', 'DENOMINACION/ MARCA', 'DENOMINACIÓN/MARCA'])
+COL_DENOM = buscar_variantes(
+    df17,
+    ['DENOMINACIÓN/ MARCA', 'DENOMINACIÓN/MARCA', 'DENOMINACION/ MARCA', 'DENOMINACION/ MARCA', 'DENOMINACIÓN/     MARCA']
+)
+
 
 # Limpieza de texto en denominación
 df17[COL_DENOM] = normalizar_texto(df17[COL_DENOM])
@@ -128,17 +132,18 @@ df = df17.copy()
 # =========================================================
 # TODO: Rellena según tu realidad
 proceso_por_variedad = {
-    # 'GESHA': 'LAVADO',
-    # 'TABI': 'HONEY',
-    # 'DOS MIL': 'NATURAL',
-    # 'BOURBON ROJO': 'LAVADO',
-    # 'CATURRA': 'LAVADO',
-    # 'OTROS': 'NATURAL'
+    'GESHA': 'LAVADO',
+    'TABI': 'HONEY',
+    'DOS MIL': 'NATURAL',
+    'BOURBON ROJO': 'LAVADO',
+    'CATURRA': 'LAVADO',
+    'OTROS': 'NATURAL'
 }
+
 tiempo_por_proceso = {
-    # 'LAVADO': 48,
-    # 'HONEY': 60,
-    # 'NATURAL': 72
+     'LAVADO': 48,
+     'HONEY': 60,
+     'NATURAL': 72
 }
 
 if proceso_por_variedad:
@@ -208,8 +213,7 @@ if all(col in df18.columns for col in ['PROCESO', 'TIEMPO DE TUESTE EN MIN']) an
     # (Opcional) Si quiere redondear:
     # df['TIEMPO_TUESTE_MEDIAN'] = df['TIEMPO_TUESTE_MEDIAN'].round(2)
 
-    else:
-    print("⚠️ No se pudo imputar TIEMPO_TUESTE_MEDIAN (faltan columnas en df18 o PROCESO en df).")
+
 
 # =========================================================
 # 11. INGENIERÍA DE CARACTERÍSTICAS
