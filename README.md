@@ -15,6 +15,7 @@ pip install -r requirements.txt
 
 ## 3. Entrenar un Modelo: 
 python scripts/modelado_cafe.py --data data/processed/dataset_final_procesado.csv --modelo rf
+
 Cambiar --modelo a lasso o ridge según necesidad.
 
 ## 4. Comparar Modelos:
