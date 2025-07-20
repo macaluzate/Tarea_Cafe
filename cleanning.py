@@ -208,6 +208,9 @@ if all(col in df18.columns for col in ['PROCESO', 'TIEMPO DE TUESTE EN MIN']) an
     # (Opcional) Si quiere redondear:
     # df['TIEMPO_TUESTE_MEDIAN'] = df['TIEMPO_TUESTE_MEDIAN'].round(2)
 
+    else:
+    print("⚠️ No se pudo imputar TIEMPO_TUESTE_MEDIAN (faltan columnas en df18 o PROCESO en df).")
+
 # =========================================================
 # 11. INGENIERÍA DE CARACTERÍSTICAS
 # =========================================================
