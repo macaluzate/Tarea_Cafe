@@ -99,7 +99,7 @@ Después de ejecutar los scripts obtendrás:
    - Distribución de residuos
 4. **Cross-validation** para Random Forest
 
-###Link Jupyter:
+### Link Jupyter:
 
 [link Del Colab](https://colab.research.google.com/drive/1NwJs8Ynt6-M77hj8jzSzq5KIlnGGFa4F?usp=sharing)
 
