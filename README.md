@@ -1,4 +1,4 @@
-# Procesamiento y Limpieza de Datos
+# Café tostado
 
 Este proyecto contiene scripts de Python para la limpieza y preprocesamiento de datasets relacionados con control de calidad y tostión de café.
 
