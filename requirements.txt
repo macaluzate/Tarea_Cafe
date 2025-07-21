@@ -1,5 +1,15 @@
- pandas
-openpyxl
-scikit-learn
-numpy
-joblib
+# Manipulación y análisis de datos
+pandas>=1.5.0
+numpy>=1.21.0
+
+# Lectura de archivos Excel
+openpyxl>=3.0.0
+
+# Machine Learning
+scikit-learn>=1.1.0
+
+# Visualización de datos
+matplotlib>=3.5.0
+
+# Opcional: Para mejor rendimiento con datasets grandes
+# xlsxwriter>=3.0.0
